@@ -1,0 +1,53 @@
+
+main{
+    background-image: url(https://media.istockphoto.com/vectors/blank-lined-paper-template-one-page-notebook-exercise-book-vector-vector-id1032062532?k=20&m=1032062532&s=170667a&w=0&h=j0oScg2PE-4xgV-azNLRBg9eB-LVqRUBGeZbOc2e13E=);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+img{
+    float: left;
+    width: 50px;
+}
+
+header{
+    text-align: center;
+    background-color: ;
+    font-size: 40px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.entryForm {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 10px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+button{
+    width: 100px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    
+}
+
+#entries{
+    text-align: center;
+    border: 10px red ridge;
+    font-family: 'Permanent Marker', cursive;
+
+}

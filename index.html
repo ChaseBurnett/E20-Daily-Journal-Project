@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase's Daily Journal</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <img src="images/logo.png" alt="chase burnett logo">
+</head>
+<header>Chase's Super Secret Extremely Private Journal</header>
+<main>
+<body>
+    <h2>Journal Entry</h2>
+    <form class="entryForm">
+            <label for="entryDate">Date</label>
+            <input type="date" name="entryDate" class="entryForm__date">
+            <label for="conceptsCovered">Concepts Covered</label>
+            <input type="text" name="conceptsCovered" class="entryForm__concepts">
+            <label for="journalEntry">Journal Entry</label>
+            <input type="textarea" name="journalEntry" class="entryForm__journalEntry">
+            <label for="moodForTheDay">Whats my Mood Today?</label>
+            <select name="moodForTheDay" id="mood">
+                <option>Great!</option>
+                <option>Okay</option>
+                <option>Meh</option>
+                <option>Not Good</option>
+              </select>
+        <button><em>Record Journal Entry</em></button>
+    </form>
+</body>
+<article id="entries">Past Entries</article>
+</main>
+<footer><strong>Stop reading my journal!</strong></footer>
+</html>
