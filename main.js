@@ -50,4 +50,17 @@ const entries = [
 }
 ] 
 
-console.log(entries)
+for(const entry of entries) {
+    console.log(entry.entry)
+}
+
+for(const entry of entries){
+    console.log(entry.concept)
+}
+
+for(const entry of entries) {
+    if(entry.id % 2 !== 0){
+        console.log(entry.id)
+    }
+}
+
