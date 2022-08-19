@@ -50,17 +50,19 @@ const entries = [
 }
 ] 
 
-for(const entry of entries) {
-    console.log(entry.entry)
+const displayEntries = () => {
+
+let html = "";
+for(let i = 0; i < entries.length; i++){
+    html += `<div class="entries">
+    <p><u>${entries[i].date}</u></p>
+    <p><strong>${entries[i].concept}</strong></p>
+    <p>${entries[i].entry}</p>
+    <p>${entries[i].mood}</p>
+    </div>`
 }
 
-for(const entry of entries){
-    console.log(entry.concept)
+document.getElementById("entries").innerHTML = html;
 }
 
-for(const entry of entries) {
-    if(entry.id % 2 !== 0){
-        console.log(entry.id)
-    }
-}
-
+displayEntries();
