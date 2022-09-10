@@ -15,7 +15,7 @@
 <main>
     <body>
     <h2>Journal Entry</h2>
-    <form class="entryForm">
+    <div class="entryForm">
             <label for="entryDate">Date</label>
             <input type="date" name="entryDate" class="entryForm__date">
             <label for="conceptsCovered">Concepts Covered</label>
@@ -29,8 +29,8 @@
             <option>Meh</option>
             <option>Not Good</option>
             </select>
-        <button><em>Record Journal Entry</em></button>
-    </form>
+        <button id="record-btn">Record Journal Entry</button>
+    </div>
 <article class = "entries" id="entries">Past Entries</article>
 <footer><strong>Stop reading my journal!</strong></footer>
 <script type="module" src="/main.js"></script>

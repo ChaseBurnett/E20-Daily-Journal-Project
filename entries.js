@@ -56,3 +56,17 @@ export const getJournalEntries = () => {
     const copyOfEntries = entries.map(entry => ({...entry}))
     return copyOfEntries
   }
+
+  const getNewEntryId = () => {
+    let highestEntryId = entries.sort((a, b) => b.id - a.id)[0].id
+    return highestEntryId + 1
+  }
+
+  export const addNewEntry = (entry) => {
+    const newId = getNewEntryId()
+    entry.id = newId
+    entries.push(entry)
+    console.log(entries)
+
+    document.dispatchEvent(new CustomEvent ('stateChanged'))
+  }
