@@ -1,5 +1,6 @@
 
 import {getJournalEntries} from './entries.js'
+import {addNewEntry} from './entries.js'
 
 
 // const entries = [
@@ -70,3 +71,35 @@ document.getElementById("entries").innerHTML = html;
 }
 
 displayEntries();
+
+document.addEventListener("click", (e) => {
+    // e.preventDefault();
+    if(e.target.id === "record-btn"){
+        const dateElement = document.querySelector("input[name=entryDate]")?.value
+        console.log(dateElement)
+
+        const conceptsCoveredElement = document.querySelector("input[name=conceptsCovered]")?.value
+        console.log(conceptsCoveredElement)
+
+        const journalEntriesElement = document.querySelector("input[name=journalEntry]")?.value
+        console.log(journalEntriesElement)
+
+        const moodElement = document.getElementById("mood")?.value
+        console.log(moodElement)
+
+        let newEntry = {
+            date: dateElement,
+            concept: conceptsCoveredElement,
+            entry: journalEntriesElement,
+            mood: moodElement
+        };
+        addNewEntry(newEntry)
+        console.log(newEntry)
+    }
+})
+
+document.addEventListener('stateChanged', event => {
+    displayEntries()
+})
+
+
