@@ -39,6 +39,30 @@ export const getJournalEntries = () => {
   }
 
   export const deleteJournalEntry = async (id) => {
-    await fetch(`${api}/entries/${id}`,{method: "DELETE"})
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+    const fetchOptions = {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+    const response = await fetch(`${api}/entries/${id}`, fetchOptions)
+    const responseJson = await response.json(response)
+    document.dispatchEvent(new CustomEvent ('stateChanged'))
+    return responseJson
+
+  }
+
+  export const editJournalEntry = async (id) => {
+    const fetchOptions = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(id)
+    }
+    const response = await fetch(`${api}/entries/${id}`, fetchOptions)
+    const responseJson = await response.json(response)
+    document.dispatchEvent(new CustomEvent ('stateChanged'))
+    return responseJson
+
   }
