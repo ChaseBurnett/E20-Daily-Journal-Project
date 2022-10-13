@@ -52,3 +52,12 @@ h2{
 
 }
 
+.delete-btn {
+    height: 50px;
+    width: 75px;
+}
+
+.edit-btn {
+    height: 50px;
+    width: 75px;
+}

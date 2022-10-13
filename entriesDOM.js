@@ -63,8 +63,8 @@ for(let i = 0; i < journalEntries.length; i++){
     <p><strong>${journalEntries[i].concept}</strong></p>
     <p>${journalEntries[i].entry}</p>
     <p>${journalEntries[i].mood}</p>
-    <button id="deleteButton--${journalEntries.id}">DELETE ENTRY</button>
-    <button id="editButton">EDIT ENTRY</button>
+    <button class="delete-btn" id="deleteButton--${journalEntries.id}">DELETE ENTRY</button>
+    <button class="edit-btn" id="editButton">EDIT ENTRY</button>
     </div>`
 }
     return html
